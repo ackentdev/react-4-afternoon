@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {Link} from 'react-router-dom';
 
 export default class Student extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       studentInfo: []
     }
@@ -26,6 +27,9 @@ componentDidMount() {
         <h1>{first_name} {last_name}</h1>
         <h3>Grade: {grade}</h3>
         <h3>Email: {email}</h3>
+        <Link>
+        <button onClick={() => console.log(this.state.studentInfo)}>Back</button>
+        </Link>
       </div>
     )
   }

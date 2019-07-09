@@ -32,6 +32,9 @@ export default class ClassList extends Component {
     return (
       <div className="box">
         <h1>{this.props.match.params.class}</h1>
+        <Link to="/">
+        <button>Back</button>
+        </Link>
         <h2>ClassList:</h2>
         <div>{mappedStudents}</div>
 
